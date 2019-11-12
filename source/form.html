@@ -6,18 +6,19 @@
   </head>
   <body>
     <header class="page-header">
-      <div class=" page-header__logo img-logo">
-        <a href="" class="img-logo__link">
-          <img class="img-logo__image" src="https://via.placeholder.com/33x38" width="33" height="38" alt="Магазин функционального питания для котов Cat Energy" >
+      <div class="header-logo">
+        <a href="" class="header-logo__link">
+          <img class="header-logo__image" src="https://via.placeholder.com/33x38" width="33" height="38" alt="Магазин функционального питания для котов Cat Energy" >
         </a>
       </div>
-      <div class="page-header__logo text-logo">
-        <a href="" class="text-logo__link">
-          <img class="text-logo__image" src="https://via.placeholder.com/101x18" width="101" height="18" alt="Магазин функционального питания для котов Cat Energy" >
+      <div class="header-logo header-logo__text">
+        <a href="" class="header-logo__link">
+          <img class="header-logo__image" src="https://via.placeholder.com/101x18" width="101" height="18" alt="Магазин функционального питания для котов Cat Energy" >
         </a>
       </div>
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
+          <button class="main-nav__burger" type="button">Открыть меню</button>
           <li class="site-list__item">
             <a href="" class="site-list__llink">Главная</a>
           </li>
@@ -38,40 +39,40 @@
           программу питания для вашего кота
         </p>
         <form class="form__main" action="https://echo.htmlacademy.ru">
-          <fieldset class="form__about">
-            <label for="name">Имя:*</label>
+          <fieldset class="form__personal personal-info">
+            <label class="personal-info__name" for="name">Имя:*</label>
             <input id="name" type="text" name="name" placeholder="барсик">
-            <label for="weight">Вес (кг):*</label>
+            <label class="personal-info__weight" for="weight">Вес (кг):*</label>
             <input id="weight" type="text" name="weight" placeholder="7">
-            <label for="age">Возраст (лет):</label>
+            <label class="personal-info__age" for="age">Возраст (лет):</label>
             <input id="age" type="text" name="age" placeholder="7">
           </fieldset>
-          <fieldset class="form__proggrams">
-            <input id="loosing-weight" type="radio" name="proggram" checked>
+          <fieldset class="form__proggrams proggrams">
+            <input class="proggrams__loosing-weight" id="loosing-weight" type="radio" name="proggram" checked>
             <label for="loosing-weight">похудение</label>
-            <input id="mass-gain" type="radio" name="proggram">
+            <input class="proggrams__mass-gain" id="mass-gain" type="radio" name="proggram">
             <label for="mass-gain">Набор массы</label>
           </fieldset>
-          <fieldset class="form__contacts">
+          <fieldset class="form__contacts contacts">
             <legend>Контактные данные (владельца кота)</legend>
             <label for="email">E-mail:*</label>
-            <input id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
+            <input class="contacts__email" id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
             <label for="phone">Телефон:*</label>
-            <input id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
+            <input class="contacts__phone" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
           </fieldset>
-          <fieldset class="form__comment">
+          <fieldset class="form__comment comment">
             <legend>Комментарий</legend>
-            <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="comment__area" name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
-          <fieldset class="form__more">
+          <fieldset class="form__more more">
             <legend>Дополнительно</legend>
-            <input id="sugar" type="checkbox" name="sugar">
+            <input class="more__sugar" id="sugar" type="checkbox" name="sugar">
             <label for="sugar">Сахарозаменитель</label>
-            <input id="water" type="checkbox" name="water">
+            <input class="more__water" id="water" type="checkbox" name="water">
             <label for="water">Питьевая вода</label>
-            <input id="milk" type="checkbox" name="milk">
+            <input class="more__milk" id="milk" type="checkbox" name="milk">
             <label for="milk">Молоко</label>
-            <input id="vitamins" type="checkbox" name="vitamins">
+            <input class="more__vitamins" id="vitamins" type="checkbox" name="vitamins">
             <label for="vitamins">Витамины</label>
           </fieldset>
           <a href="" class="form__btn button">Отправить заявку</a>
@@ -85,7 +86,7 @@
           <p class="invite__text"> ул. Большая Конюшенная, д. 19/8  Санкт-Петербург</p>
         </div>
         <div class="invite__map">
-          <img class="invite__image" src="https://via.placeholder.com/320x400" width="320" height="400" alt="Наш адресс ул. Большая Конюшенная, д. 19/8  Санкт-Петербург" >
+          <iframe class="invite__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002753!2d30.32085871561837!3d59.93871916905476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573559252961!5m2!1sru!2sru" width="320" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </div>
       </section>
       <footer class="page-footer">
