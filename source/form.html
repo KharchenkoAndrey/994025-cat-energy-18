@@ -40,39 +40,39 @@
         </p>
         <form class="form__main" action="https://echo.htmlacademy.ru">
           <fieldset class="form__personal personal-info">
-            <label class="personal-info__name" for="name">Имя:*</label>
-            <input id="name" type="text" name="name" placeholder="барсик">
-            <label class="personal-info__weight" for="weight">Вес (кг):*</label>
-            <input id="weight" type="text" name="weight" placeholder="7">
-            <label class="personal-info__age" for="age">Возраст (лет):</label>
-            <input id="age" type="text" name="age" placeholder="7">
+            <label for="name">Имя:*</label>
+            <input class="field-text" id="name" type="text" name="name" placeholder="барсик">
+            <label for="weight">Вес (кг):*</label>
+            <input class="field-text" id="weight" type="text" name="weight" placeholder="7">
+            <label for="age">Возраст (лет):</label>
+            <input class="field-text" id="age" type="text" name="age" placeholder="7">
           </fieldset>
           <fieldset class="form__proggrams proggrams">
-            <input class="proggrams__loosing-weight" id="loosing-weight" type="radio" name="proggram" checked>
+            <input class="field-radio" id="loosing-weight" type="radio" name="proggram" checked>
             <label for="loosing-weight">похудение</label>
-            <input class="proggrams__mass-gain" id="mass-gain" type="radio" name="proggram">
+            <input class="field-radio" id="mass-gain" type="radio" name="proggram">
             <label for="mass-gain">Набор массы</label>
           </fieldset>
           <fieldset class="form__contacts contacts">
             <legend>Контактные данные (владельца кота)</legend>
             <label for="email">E-mail:*</label>
-            <input class="contacts__email" id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
+            <input class="field-email" id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
             <label for="phone">Телефон:*</label>
-            <input class="contacts__phone" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
+            <input class="field-phone" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
           </fieldset>
           <fieldset class="form__comment comment">
             <legend>Комментарий</legend>
-            <textarea class="comment__area" name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="field-textarea" name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="form__more more">
             <legend>Дополнительно</legend>
-            <input class="more__sugar" id="sugar" type="checkbox" name="sugar">
+            <input class="field-checkbox" id="sugar" type="checkbox" name="sugar">
             <label for="sugar">Сахарозаменитель</label>
-            <input class="more__water" id="water" type="checkbox" name="water">
+            <input class="field-checkbox" id="water" type="checkbox" name="water">
             <label for="water">Питьевая вода</label>
-            <input class="more__milk" id="milk" type="checkbox" name="milk">
+            <input class="field-checkbox" id="milk" type="checkbox" name="milk">
             <label for="milk">Молоко</label>
-            <input class="more__vitamins" id="vitamins" type="checkbox" name="vitamins">
+            <input class="field-checkbox" id="vitamins" type="checkbox" name="vitamins">
             <label for="vitamins">Витамины</label>
           </fieldset>
           <a href="" class="form__btn button">Отправить заявку</a>
