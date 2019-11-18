@@ -1,64 +1,21 @@
-@import "burger.less";
+
 @import "button.less";
-@import "catalog-card.less";
 @import "catalog.less";
-@import "comment.less";
-@import "contacts.less";
-@import "copyright.less";
 @import "example.less";
 @import "features.less";
-@import "field-checkbox.less";
-@import "field-email.less";
-@import "field-phone.less";
-@import "field-radio.less";
-@import "field-text.less";
-@import "field-textarea.less";
-@import "form.less";
-@import "header-logo.less";
 @import "invite.less";
-@import "main-nav.less";
-@import "more.less";
 @import "page-footer.less";
-@import "page-header.less";
-@import "personal-info.less";
 @import "present.less";
-@import "proggram.less";
 @import "programms.less";
 @import "site-list.less";
-@import "social.less";
-
-.visually-hidden:not(:focus):not(:active) {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  white-space: nowrap;
-  border: 0;
-  clip-path: inset(100%);
-}
-
-@font-face {
-  font-family: "OswaldRegular", "Arial", sans-serif;
-  src: url("../fonts/oswaldregular.woff") format("woff"),
-    url("../fonts/oswaldregular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "OswaldMedium", "Arial", sans-serif;
-  src: url("../fonts/oswaldmedium.woff") format("woff"),
-    url("../fonts/oswaldmedium.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
+@import "variables.less";
+@import "fonts.less";
+@import "visually-hidden.less";
+@import "copyright.less";
 
 body {
-  font-family: "OswaldRegular", "Arial", sans-serif;
-  width: 320px;
+  font-family: @oswaldRegular;
+  min-width: 320px;
   margin: 0 auto;
 }
 
