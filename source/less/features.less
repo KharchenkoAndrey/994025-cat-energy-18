@@ -4,6 +4,8 @@
 }
 
 .features__list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
 }
 
@@ -12,4 +14,11 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+  .features__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
