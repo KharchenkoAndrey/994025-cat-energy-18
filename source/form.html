@@ -39,13 +39,14 @@
     <main class="page-main">
       <main class="page-main">
         <section class="form">
+          <div class="form__wrapper wrapper">
           <h2 class="form__title">Подбор программы</h2>
           <p class="form__text">
             Заполните анкету и мы подберем
             программу питания для вашего кота
           </p>
           <form class="form__main" action="https://echo.htmlacademy.ru">
-            <fieldset class="form__personal personal-info">
+            <fieldset class="form__fieldset form__personal personal-info">
               <label class="personal-info__label field-label" for="name">Имя:*</label>
               <input class="field-text personal-info__text" id="name" type="text" name="name" placeholder="барсик">
               <label class="personal-info__label field-label" for="weight">Вес (кг):*</label>
@@ -53,7 +54,7 @@
               <label class="personal-info__label field-label" for="age">Возраст (лет):</label>
               <input class="field-text personal-info__text" id="age" type="text" name="age" placeholder="7">
             </fieldset>
-            <fieldset class="form__proggrams proggram">
+            <fieldset class="form__fieldset form__proggrams proggram">
               <input class="field-radio proggram__radio" id="loosing-weight" type="radio" name="proggram" checked>
               <label class="proggram__label field-label" for="loosing-weight">похудение</label>
               <input class="field-radio proggram__radio" id="mass-gain" type="radio" name="proggram">
@@ -61,18 +62,18 @@
               <input class="field-radio proggram__radio" id="dontnow" type="radio" name="proggram">
               <label class="proggram__label field-label" for="dontnow">Не знаю (Нужен ваш совет)</label>
             </fieldset>
-            <fieldset class="form__contacts contacts">
+            <fieldset class="form__fieldset form__contacts contacts">
               <legend class="contacts__legend">Контактные данные (владельца кота)</legend>
               <label class="contacts__label field-label" for="email">E-mail:*</label>
               <input class="field-email contacts__email" id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
               <label class="contacts__label field-label" for="phone">Телефон:*</label>
               <input class="field-phone contacts__phone" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
             </fieldset>
-            <fieldset class="form__comment comment">
+            <fieldset class="form__fieldset form__comment comment">
               <legend class="comment__legend">Комментарий</legend>
               <textarea class="field-textarea" name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
             </fieldset>
-            <fieldset class="form__more more">
+            <fieldset class="form__fieldset form__more more">
               <legend class="more__legend">Дополнительно</legend>
               <input class="field-checkbox more__checkbox" id="sugar" type="checkbox" name="sugar">
               <label class="more__label field-label" for="sugar">Сахарозаменитель</label>
@@ -85,16 +86,19 @@
             </fieldset>
             <a href="" class="form__btn button">Отправить заявку</a>
             <small>* — Обязательные поля</small>
+          </div>
           </form>
         </section>
         <section class="invite">
-          <h2 class="visually-hidden">Наш адрес</h2>
-          <div class="invite__address">
-            <p class="invite__text-dillers"> приглашаем  к сотрудничеству  дилеров!</p>
-            <p class="invite__text-adress"> ул. Большая Конюшенная, д. 19/8  Санкт-Петербург</p>
+          <div class="invite__wrapper wrapper">
+            <h2 class="visually-hidden">Наш адрес</h2>
+            <div class="invite__address">
+              <p class="invite__text-dillers"> приглашаем  к сотрудничеству  дилеров!</p>
+              <p class="invite__text-adress"> ул. Большая Конюшенная, д. 19/8  Санкт-Петербург</p>
+            </div>
           </div>
           <div class="invite__map">
-            <iframe class="invite__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002753!2d30.32085871561837!3d59.93871916905476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573559252961!5m2!1sru!2sru" width="320" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <iframe class="invite__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002753!2d30.32085871561837!3d59.93871916905476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573559252961!5m2!1sru!2sru" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
           </div>
         </section>
         <footer class="page-footer">
