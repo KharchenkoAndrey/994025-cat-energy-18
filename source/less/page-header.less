@@ -1,0 +1,46 @@
+.page-header {
+  display: flex;
+  height: 765px;
+}
+
+.page-header__present {
+  background-image: url("../img/index-background-mobile.jpg");
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.page-header__title {
+  font-size: 36px;
+  line-height: 36px;
+  color: #ffffff;
+}
+
+.page-header__tagline {
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__logo {
+  height: 65px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    justify-content: space-between;
+  }
+}
