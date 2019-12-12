@@ -1,0 +1,30 @@
+.burger {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 24px;
+  height: 65px;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.burger--closed {
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.burger--opened {
+  background-image: url("../img/icon-close.svg");
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (min-width: @tablet-width) {
+  .burger {
+    display: none;
+  }
+}

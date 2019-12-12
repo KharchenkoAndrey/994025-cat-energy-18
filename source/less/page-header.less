@@ -1,25 +1,19 @@
 .page-header {
-  display: flex;
-  height: 765px;
-}
+  position: relative;
+  /*min-height: 700px;*/
 
-.page-header__present {
-  background-image: url("../img/index-background-mobile.jpg");
-  background-position: 0 0;
-  background-size: cover;
-}
-
-.page-header__title {
-  font-size: 36px;
-  line-height: 36px;
-  color: #ffffff;
-}
-
-.page-header__tagline {
-  font-size: 14px;
-  line-height: 14px;
-  text-transform: uppercase;
-  color: #ffffff;
+  &::before {
+    content: "";
+    position: absolute;
+    display: none;
+    width: 552px;
+    height: 499px;
+    top: 140px;
+    left: 50%;
+    margin-left: -180px;
+    background-color: transparent;
+    background-image: url("../img/index-can-desktop.png");
+  }
 }
 
 .page-header__wrapper {
@@ -27,20 +21,173 @@
   flex-direction: column;
 }
 
-.page-header__logo {
-  height: 65px;
+.page-header__link {
+  position: relative;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 65px;
+    background-image: url("../img/logo-mobile.svg");
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.page-header__present {
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  min-height: 500px;
+  background-image: url("../img/index-background-mobile.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 170px;
+    left: 0;
+    width: 280px;
+    height: 271px;
+    background-image: url("../img/index-can-mobile.png");
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.page-header__title {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  color: #ffffff;
+}
+
+.page-header__tagline {
+  display: block;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 300px;
+}
+
+.page-header__flex-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-neader__btn {
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
-  .page-header__wrapper {
+  .page-header__present {
+    min-height: 950px;
+    background-image: url("../img/index-can-tablet.jpg");
+    background-position: 0 250px;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .page-header__flex-container {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  .page-header__wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .page-header__wrapper--present {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-header__link {
+    &::before {
+      width: 173px;
+      background-image: url("../img/logo-tablet.svg");
+      background-position: 0 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .page-header__title {
+    text-align: left;
+    width: 427px;
+    color: #000000;
+    font-size: 60px;
+    line-height: 60px;
+    margin-left: 90px;
+  }
+
+  .page-header__tagline {
+    color: #000000;
+    font-size: 20px;
+    line-height: 20px;
+    font-style: normal;
+    margin-bottom: 50px;
+    margin-left: 90px;
+  }
+
+  .page-header__btn {
+    margin-left: 90px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 16px 25px;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .page-header__wrapper {
-    justify-content: space-between;
+  .page-header__link {
+    &::before {
+      width: 202px;
+      background-image: url("../img/logo-desktop.svg");
+      background-position: 0 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .page-header--index {
+    min-height: 700px;
+    background-image: url("../img/index-background-desktop.jpg");
+    background-position: 650px 0;
+    background-repeat: no-repeat;
+    background-size: 700px;
+
+    &::before {
+      display: block;
+    }
+  }
+
+  .page-header__present {
+    min-height: 700px;
+    width: 650px;
+    background-image: none;
   }
 }

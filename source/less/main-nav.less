@@ -1,0 +1,17 @@
+.main-nav {
+  min-height: 65px;
+}
+
+.main-nav--closed .site-list {
+  display: none;
+}
+
+.main-nav--opened .site-list {
+  display: flex;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav--closed .site-list {
+    display: flex;
+  }
+}
