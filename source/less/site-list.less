@@ -27,7 +27,8 @@
   text-decoration: none;
   padding: 22px 0;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 
@@ -35,7 +36,7 @@
     opacity: 0.3;
   }
 
-  &:focus::before {
+  &--active::before {
     content: "";
     display: block;
     position: absolute;
@@ -59,7 +60,7 @@
   .site-list__llink {
     padding: 0;
 
-    &:focus::before {
+    &--active::before {
       bottom: -15px;
     }
   }
@@ -83,7 +84,7 @@
   .site-list__llink--index {
     color: #ffffff;
 
-    &:focus::before {
+    &::before {
       background-color: #ffffff;
     }
   }

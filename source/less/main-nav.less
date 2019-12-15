@@ -2,6 +2,10 @@
   min-height: 65px;
 }
 
+.main-nav--closed {
+  display: none;
+}
+
 .main-nav--closed .site-list {
   display: none;
 }
@@ -11,6 +15,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .main-nav--closed {
+    display: flex;
+  }
+
   .main-nav--closed .site-list {
     display: flex;
   }

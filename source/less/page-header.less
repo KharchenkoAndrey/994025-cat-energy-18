@@ -1,6 +1,5 @@
 .page-header {
   position: relative;
-  /*min-height: 700px;*/
 
   &::before {
     content: "";
@@ -97,6 +96,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-header {
+    background-image: none;
+  }
+
   .page-header__present {
     min-height: 950px;
     background-image: url("../img/index-can-tablet.jpg");
@@ -142,7 +145,7 @@
     color: #000000;
     font-size: 60px;
     line-height: 60px;
-    margin-left: 90px;
+    margin-left: 45px;
   }
 
   .page-header__tagline {
@@ -151,11 +154,11 @@
     line-height: 20px;
     font-style: normal;
     margin-bottom: 50px;
-    margin-left: 90px;
+    margin-left: 45px;
   }
 
   .page-header__btn {
-    margin-left: 90px;
+    margin-left: 45px;
     font-size: 20px;
     line-height: 20px;
     padding: 16px 25px;
@@ -176,11 +179,24 @@
   .page-header--index {
     min-height: 700px;
     background-image: url("../img/index-background-desktop.jpg");
-    background-position: 650px 0;
+    background-position: 50vw 0;
     background-repeat: no-repeat;
     background-size: 700px;
 
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 0;
+      width: 45vw;
+      height: 675px;
+      background-color: #64a83b;
+      z-index: -1;
+    }
+
     &::before {
+      margin-left: -150px;
       display: block;
     }
   }

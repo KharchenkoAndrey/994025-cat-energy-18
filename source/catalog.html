@@ -10,7 +10,7 @@
   <body>
     <header class="page-header">
       <div class="page-header__flex-container">
-        <div class="page-header__wrapper wrapper">
+        <div class="page-header__wrapper container">
           <div class="page-header__logo header-logo">
             <a href="" class="page-header__link"></a>
             <button class="burger burger--closed" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -22,7 +22,7 @@
                   <a href="" class="site-list__llink">Главная</a>
                 </li>
                 <li class="site-list__item">
-                  <a href="catalog.html" class="site-list__llink">Каталог продукции</a>
+                  <a href="catalog.html" class="site-list__llink site-list__llink--active">Каталог продукции</a>
                 </li>
                 <li class="site-list__item">
                   <a href="form.html" class="site-list__llink">Подбор программы</a>
@@ -44,7 +44,7 @@
   <main class="page-main">
     <main class="page-main">
       <section class="catalog">
-        <div class="catalog__wrapper wrapper">
+        <div class="catalog__wrapper container">
           <h2 class="catalog__title">Каталог продукции</h2>
           <ul class="catalog__list">
             <li class="catalog__item">
@@ -216,12 +216,12 @@
               </div>
             </li>
           </ul>
-          <div class="catalog__additional">
-            <h3 class="catalog__title catalog__title--additional">Дополнительные товары</h3>
-            <ul class="catalog__list catalog__list--additional">
-              <li class="catalog__item catalog__item--additional">
-                <div class="catalog-card catalog-card--additional">
-                  <table class="catalog-card__table catalog-card__table--additional">
+          <div class="catalog-additional">
+            <h3 class="catalog-additional__title">Дополнительные товары</h3>
+            <ul class="catalog-additional__list">
+              <li class="catalog-additional__item">
+                <div class="catalog-additional__card">
+                  <table class="catalog-additional__table">
                     <tr>
                       <th>Сахарозаменитель</th>
                     </tr>
@@ -230,12 +230,12 @@
                       <td>200 Р.</td>
                     </tr>
                   </table>
-                  <a class="catalog-card__btn button" href="">заказать</a>
+                  <a class="catalog-additional__btn button" href="">заказать</a>
                 </div>
               </li>
-              <li class="catalog__item catalog__item--additional">
-                <div class="catalog-card catalog-card--additional">
-                  <table class="catalog-card__table catalog-card__table--additional">
+              <li class="catalog-additional__item">
+                <div class="catalog-additional__card">
+                  <table class="catalog-additional__table">
                     <tr>
                       <th>Питьевая вода</th>
                     </tr>
@@ -244,12 +244,12 @@
                       <td>50 Р.</td>
                     </tr>
                   </table>
-                  <a class="catalog-card__btn button" href="">заказать</a>
+                  <a class="catalog-additional__btn button" href="">заказать</a>
                 </div>
               </li>
-              <li class="catalog__item catalog__item--additional">
-                <div class="catalog-card catalog-card--additional">
-                  <table class="catalog-card__table catalog-card__table--additional">
+              <li class="catalog-additional__item">
+                <div class="catalog-card catalog-additional__card">
+                  <table class="catalog-additional__table">
                     <tr>
                       <th>Молоко</th>
                     </tr>
@@ -258,12 +258,12 @@
                       <td>100 Р.</td>
                     </tr>
                   </table>
-                  <a class="catalog-card__btn button" href="">заказать</a>
+                  <a class="catalog-additional__btn button" href="">заказать</a>
                 </div>
               </li>
-              <li class="catalog__item catalog__item--additional">
-                <div class="catalog-card catalog-card--additional">
-                  <table class="catalog-card__table catalog-card__table--additional">
+              <li class="catalog-additional__item">
+                <div class="catalog-additional__card">
+                  <table class="catalog-additional__card">
                     <tr>
                       <th>Витамины</th>
                     </tr>
@@ -272,7 +272,7 @@
                       <td>300 Р.</td>
                     </tr>
                   </table>
-                  <a class="catalog-card__btn button" href="">заказать</a>
+                  <a class="catalog-additional__btn button" href="">заказать</a>
                 </div>
               </li>
             </ul>
@@ -286,7 +286,7 @@
         </div>
       </section>
       <section class="invite">
-        <div class="invite__wrapper wrapper">
+        <div class="invite__wrapper container">
           <h2 class="visually-hidden">Наш адрес</h2>
           <div class="invite__address">
             <p class="invite__text-dillers"> приглашаем  к сотрудничеству  дилеров!</p>
@@ -298,7 +298,7 @@
         </div>
       </section>
       <footer class="page-footer">
-        <div class="page-footer__wrapper wrapper">
+        <div class="page-footer__wrapper container">
           <div class="page-footer__logo text-logo">
             <a href="" class="text-logo__link">
               <img class="text-logo__image" src="img/logo-footer.svg" width="128" height="24" alt="Магазин функционального питания для котов Cat Energy" >
