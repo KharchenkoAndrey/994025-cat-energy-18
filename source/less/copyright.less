@@ -1,6 +1,56 @@
+.copyright {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 280px;
+    height: 1px;
+    background-color: #d9d9d9;
+  }
+}
+
 .copyright__text {
+  font-family: @arial;
   text-decoration: none;
-  color: #444444;
+  color: rgba(68, 68, 68, 1);
   font-size: 16px;
+
   line-height: 16px;
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+.copyright__logo {
+  &:hover,
+  &:focus {
+    path {
+      fill: rgba(104, 183, 56, 1);
+    }
+
+    &:active {
+      path {
+        fill: rgba(104, 183, 56, 0.3);
+      }
+    }
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    width: 165px;
+
+    &::before {
+      display: none;
+    }
+  }
 }
