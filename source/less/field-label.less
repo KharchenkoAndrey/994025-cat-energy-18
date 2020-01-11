@@ -2,4 +2,59 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  margin-right: 15px;
+}
+
+.field-label--radio {
+  position: relative;
+  padding-left: 45px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    background-color: transparent;
+    border: 1px solid #e6e6e6;
+    border-radius: 50%;
+  }
+}
+
+.field-radio:checked + .field-label--radio::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 10px;
+  width: 12px;
+  height: 12px;
+  background-color: #68b738;
+  border-radius: 50%;
+}
+
+
+@media (min-width: @tablet-width) {
+  .field-label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .field-label--radio {
+    padding-left: 60px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+      margin-top: -20px;
+    }
+  }
+
+  .field-radio:checked + .field-label--radio::after {
+    width: 18px;
+    height: 18px;
+    top: 2px;
+    left: 12px;
+  }
 }

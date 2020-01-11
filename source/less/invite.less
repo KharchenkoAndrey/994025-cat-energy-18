@@ -16,3 +16,33 @@
   color: #444444;
   width: 140px;
 }
+
+@media (min-width: @desktop-width) {
+  .invite {
+    position: relative;
+  }
+
+  .invite__address {
+    box-sizing: border-box;
+    position: absolute;
+    top: 90px;
+    left: 110px;
+    width: 570px;
+    background-color: #ffffff;
+    padding: 60px 80px;
+  }
+
+  .invite__text-dillers,
+  .invite__text-adress {
+    margin: 0;
+  }
+
+  .invite__text-dillers {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .invite__text-adress {
+    font-size: 16px;
+  }
+}
