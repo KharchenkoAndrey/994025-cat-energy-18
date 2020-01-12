@@ -1,6 +1,8 @@
 .catalog__title {
   font-size: 36px;
   line-height: 60px;
+  position: relative;
+  font-weight: normal;
 }
 
 .catalog__list {
@@ -12,12 +14,22 @@
 .catalog__item {
   margin-bottom: 21px;
   position: relative;
-  border-bottom: 1px solid #ededed;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100vw;
+    height: 1px;
+    background-color: #ededed;
+  }
+  /*border-bottom: 1px solid #ededed;
 
   &:first-child {
     border-top: 1px solid #ededed;
     padding-top: 20px;
-  }
+  }*/
 }
 
 .catalog-card {
@@ -148,7 +160,9 @@
   }
 
   .catalog__title {
-    margin-bottom: 110px;
+    margin-bottom: 170px;
+    font-size: 60px;
+    line-height: 60px;
   }
 
   .catalog__list {
@@ -174,6 +188,10 @@
     &:last-child {
       background-color: #ffffff;
       border: 2px solid #e6e6e6;
+    }
+
+    &::before {
+      display: none;
     }
   }
 

@@ -1,7 +1,18 @@
 .more__legend {
+  position: relative;
   font-size: 24px;
   line-height: 24px;
   margin-bottom: 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 165px;
+    width: 100vw;
+    height: 3px;
+    background-color: #68b738;
+  }
 }
 
 .more__checkbox {
@@ -23,6 +34,14 @@
     margin-top: -14px;
     border: 1px solid #cfcfcf;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.more__label:hover::before {
+  border-color: #bbbbbb;
 }
 
 .more__checkbox:checked + .more__label::after {
@@ -43,6 +62,21 @@
     line-height: 36px;
     margin-bottom: 70px;
     width: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 650px;
+      width: 100vw;
+      height: 3px;
+      background-color: #68b738;
+    }
+
+    &::after {
+      top: 20px;
+      left: 250px;
+    }
   }
 
   .more__label {
@@ -64,5 +98,15 @@
 @media (min-width: @desktop-width) {
   .more__label {
     margin-right: 0;
+  }
+
+  .more__legend {
+    &::before {
+      right: 1210px;
+    }
+
+    &::after {
+      left: 260px;
+    }
   }
 }

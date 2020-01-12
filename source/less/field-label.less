@@ -8,6 +8,7 @@
 .field-label--radio {
   position: relative;
   padding-left: 45px;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -21,6 +22,14 @@
     border: 1px solid #e6e6e6;
     border-radius: 50%;
   }
+}
+
+.field-label--radio:hover::before {
+  border-color: #bbbbbb;
+}
+
+.field-label--radio:active {
+  opacity: 0.3;
 }
 
 .field-radio:checked + .field-label--radio::after {
