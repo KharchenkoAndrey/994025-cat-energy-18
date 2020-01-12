@@ -1,4 +1,52 @@
 .comment__legend {
+  position: relative;
   font-size: 24px;
   line-height: 24px;
+  margin-bottom: 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 140px;
+    width: 100vw;
+    height: 3px;
+    background-color: #68b738;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .comment__legend {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 70px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 200px;
+      width: 100vw;
+      height: 3px;
+      background-color: #68b738;
+    }
+
+    &::after {
+      top: 20px;
+      left: 220px;
+    }
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .comment__legend {
+    &::before {
+      right: 200px;
+    }
+
+    &::after {
+      left: 250px;
+    }
+  }
 }

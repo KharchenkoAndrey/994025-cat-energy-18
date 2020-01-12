@@ -98,6 +98,7 @@
 @media (min-width: @tablet-width) {
   .page-header {
     background-image: none;
+    padding-top: 20px;
   }
 
   .page-header__present {
@@ -145,7 +146,7 @@
     color: #000000;
     font-size: 60px;
     line-height: 60px;
-    margin-left: 45px;
+    margin-left: 85px;
   }
 
   .page-header__tagline {
@@ -154,11 +155,11 @@
     line-height: 20px;
     font-style: normal;
     margin-bottom: 50px;
-    margin-left: 45px;
+    margin-left: 85px;
   }
 
   .page-header__btn {
-    margin-left: 45px;
+    margin-left: 85px;
     font-size: 20px;
     line-height: 20px;
     padding: 16px 25px;
@@ -166,6 +167,16 @@
 }
 
 @media (min-width: @desktop-width) {
+  .page-header {
+    padding-top: 50px;
+  }
+
+  .page-header__title,
+  .page-header__tagline,
+  .page-header__btn {
+    margin-left: 110px;
+  }
+
   .page-header__link {
     &::before {
       width: 202px;

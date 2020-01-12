@@ -72,6 +72,20 @@
 }
 
 @media (min-width: @tablet-width) {
+  .features {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 50px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #e6e6e6;
+    }
+  }
+
   .features__list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -116,6 +130,14 @@
     &::before {
       width: 60px;
       height: 60px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features {
+    &::after {
+      display: none;
     }
   }
 }

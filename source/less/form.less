@@ -1,6 +1,12 @@
+.form {
+  margin-bottom: 35px;
+  overflow: hidden;
+}
+
 .form__title {
   font-size: 36px;
   line-height: 60px;
+  font-weight: normal;
 }
 
 .form__text {
@@ -8,4 +14,183 @@
   line-height: 18px;
   color: #111111;
   text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.form__fieldset {
+  position: relative;
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.form__personal,
+.form__proggrams {
+  margin-bottom: 45px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: #ededed;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: #ededed;
+  }
+}
+
+.form__contacts,
+.form__comment {
+  margin-bottom: 30px;
+}
+
+.form__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form__item--radio {
+  margin-bottom: 25px;
+}
+
+.form__radio {
+  display: none;
+}
+
+.form__btn {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form__small {
+  font-family: @arial;
+  display: block;
+  color: #444444;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .form__wrapper {
+    padding: 0 40px;
+  }
+
+  .form__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-left: -40px;
+  }
+
+  .form__text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__personal,
+  .form__proggrams {
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+
+  .form__proggrams {
+    border: 1px solid #e6e6e6;
+    padding: 25px 0 0 20px;
+    margin-bottom: 70px;
+  }
+
+  .form__contacts {
+    margin-bottom: 70px;
+  }
+
+  .form__item--radio {
+    margin-bottom: 35px;
+  }
+
+  .form__item--checkbox {
+    width: 50%;
+    margin-bottom: 35px;
+  }
+
+  .fieldset-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .fieldset-wrapper--contacts {
+    flex-direction: column;
+  }
+
+  .form__submit {
+    display: flex;
+    align-items: center;
+  }
+
+  .form__small {
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: -25px;
+  }
+
+  .form__btn {
+    width: 280px;
+    margin-right: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__wrapper {
+    padding: 0;
+  }
+
+  .form__title {
+    margin-left: 0;
+  }
+
+  .form__main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__personal,
+  .form__proggrams {
+    width: 44%;
+  }
+
+  .form__contacts {
+    width: 100%;
+  }
+
+  .form__item--contacts {
+    width: 44%;
+  }
+
+  .fieldset-wrapper--contacts {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form__item--checkbox {
+    width: 245px;
+    margin-right: 0;
+  }
+
+  .form__btn {
+    width: 570px;
+  }
 }
