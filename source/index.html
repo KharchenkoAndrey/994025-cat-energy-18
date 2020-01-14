@@ -12,7 +12,13 @@
       <div class="page-header__flex-container">
         <div class="page-header__wrapper container">
           <div class="page-header__logo header-logo">
-            <a href="" class="page-header__link"></a>
+            <a href="" class="page-header__link">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="page-header__image" src="img/logo-mobile.svg" alt="Логотип магазина Cat Energy" width="195" height="45">
+              </picture>
+            </a>
             <button class="burger burger--closed" type="button"><span class="visually-hidden">Открыть меню</span></button>
           </div>
           <nav class="main-nav main-nav--closed">
@@ -126,15 +132,21 @@
           <input id="tab1" type="checkbox" name="tab">
           <div class="example__slider"><span></span></div>
           <label for="tab1">Стало</label>
-          <img src="img/before-mobile.png" width="311" height="232" alt="Ваш питомец до" class="example__image example__image--before">
-          <img src="img/after-mobile.png" width="251" height="240" alt="Ваш питомец до" class="example__image example__image--after">
+          <img src="img/before-mobile.png" srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Ваш питомец до" class="example__image example__image--before">
+          <img src="img/after-mobile.png" srcset="img/after-mobile@2x.png 2x" width="251" height="240" alt="Ваш питомец до" class="example__image example__image--after">
         </div>
       </div>
     </div>
       <div class="example__comparison">
         <div class="example__photos">
-          <img class="example__photo-before" src="img/before-tablet.png" alt="До" width="690" height="517">
-          <img class="example__photo-after" src="img/after-tablet.png" alt="После" width="690" height="517">
+          <picture>
+          <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
+          <img class="example__photo-before" src="img/before-tablet.png" srcset="img/before-tablet@2x.png 2x" alt="До" width="690" height="517">
+          </picture>
+          <picture>
+          <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png, img/after-desktop@2x.png 2x">
+          <img class="example__photo-after" src="img/after-tablet.png" srcset="img/after-tablet@2x.png 2x" alt="После" width="690" height="517">
+          </picture>
           <div class="example__range">
           <button class="example__button" type="button">Было</button>
           <div class="example__scale">
