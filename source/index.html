@@ -5,9 +5,12 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header page-header--index">
       <div class="page-header__flex-container">
         <div class="page-header__wrapper container">
@@ -140,6 +143,7 @@
       <div class="example__comparison">
         <div class="example__photos">
           <picture>
+          <source type="image/webp" srcset="img/before-tablet.webp 1x, img/before-tablet@2x.webp 2x">
           <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
           <img class="example__photo-before" src="img/before-tablet.png" srcset="img/before-tablet@2x.png 2x" alt="До" width="690" height="517">
           </picture>
