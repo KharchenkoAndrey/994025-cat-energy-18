@@ -5,8 +5,12 @@
   padding-bottom: 30px;
 }
 
-.invite__wrapper--catalog,
+/*.invite__wrapper--catalog,
 .invite__wrapper--form {
+  background-color: #f2f2f2;
+}*/
+
+.invite--grey-bg {
   background-color: #f2f2f2;
 }
 
@@ -29,6 +33,32 @@
 .invite__image {
   display: block;
   margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.invite__map {
+  height: 352px;
+}
+
+@media (min-width: @tablet-width) {
+  .invite__wrapper {
+    padding: 0 40px;
+  }
+
+  .invite__text-dillers {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .invite__address {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .invite__map {
+    height: 430px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -58,5 +88,9 @@
 
   .invite__text-adress {
     font-size: 16px;
+  }
+
+  .invite__map {
+    height: 385px;
   }
 }

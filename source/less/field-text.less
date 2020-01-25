@@ -4,7 +4,7 @@
   line-height: 18px;
   text-transform: uppercase;
   flex-grow: 1;
-  padding: 15px 0 15px 15px;
+  padding: 12px 0 13px 15px;
   border: 1px solid #e6e6e6;
   outline: none;
 
@@ -15,5 +15,11 @@
   &:focus,
   &:active {
     border: 2px solid #444444;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-text {
+    padding: 15px 0 15px 15px;
   }
 }

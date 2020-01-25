@@ -4,7 +4,6 @@
   font-family: @oswald;
   font-size: 20px;
   line-height: 20px;
-  font-weight: 500;
   text-transform: uppercase;
   list-style: none;
   text-align: center;
@@ -38,7 +37,7 @@
 
   &--active::before {
     content: "";
-    display: block;
+    display: none;
     position: absolute;
     bottom: 8px;
     height: 2px;
@@ -61,7 +60,8 @@
     padding: 0;
 
     &--active::before {
-      bottom: -15px;
+      display: block;
+      bottom: -11px;
     }
   }
 
@@ -87,5 +87,11 @@
     &::before {
       background-color: #ffffff;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    font-size: 20px;
   }
 }

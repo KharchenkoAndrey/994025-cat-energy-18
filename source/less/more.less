@@ -2,7 +2,7 @@
   position: relative;
   font-size: 24px;
   line-height: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 
   &::after {
     content: "";
@@ -22,7 +22,7 @@
 .more__label {
   padding-left: 45px;
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 
   &::before {
     content: "";
@@ -60,22 +60,23 @@
   .more__legend {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 70px;
+    margin-bottom: 65px;
     width: 100%;
+    transform: translateY(-2px);
 
     &::before {
       content: "";
       position: absolute;
-      top: 20px;
-      right: 650px;
+      top: 22px;
+      right: 668px;
       width: 100vw;
       height: 3px;
       background-color: #68b738;
     }
 
     &::after {
-      top: 20px;
-      left: 250px;
+      top: 22px;
+      left: 252px;
     }
   }
 
@@ -101,12 +102,16 @@
   }
 
   .more__legend {
+    transform: translateY(1px);
+
     &::before {
-      right: 1210px;
+      top: 21px;
+      right: 1260px;
     }
 
     &::after {
-      left: 260px;
+      top: 21px;
+      left: 252px;
     }
   }
 }

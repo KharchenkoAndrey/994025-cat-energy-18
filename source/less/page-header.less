@@ -21,6 +21,15 @@
   }
 }
 
+.page-header__bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -135px;
+  margin-left: -140px;
+  z-index: 100;
+}
+
 .page-header__wrapper {
   display: flex;
   flex-direction: column;
@@ -40,6 +49,7 @@
 
   .page-header__image {
     width: 195px;
+    margin-top: -6px;
   }
 }
 
@@ -51,16 +61,31 @@
   background-image: url("../img/index-background-mobile.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100vw 305px;
 
   @media (min-resolution: @retina-dppx) {
     background-image: url("../img/index-background-mobile@2x.jpg");
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 100vw;
+    height: calc(60% + 10px);
+    background-color: #64a83b;
+    z-index: -500;
+
+    @media (min-width: 321px) {
+      display: none;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
-    top: 170px;
+    top: 167px;
     left: 0;
     width: 280px;
     height: 271px;
@@ -80,6 +105,9 @@
   font-size: 36px;
   line-height: 36px;
   color: #ffffff;
+  margin: 0;
+  margin-top: 27px;
+  margin-bottom: 25px;
 }
 
 .page-header__tagline {
@@ -97,9 +125,11 @@
   flex-direction: column;
 }
 
-.page-neader__btn {
+/*.page-neader__btn {
+  font-size: 14px;
+  line-height: 18px;
   width: 100%;
-}
+}*/
 
 @media (min-width: @tablet-width) {
   .page-header {
@@ -107,10 +137,19 @@
     padding-top: 20px;
   }
 
+  .page-header__logo {
+    transform: translate(-10px, 2px);
+  }
+
+  .page-header__image {
+    width: 173px;
+    height: 58px;
+  }
+
   .page-header__present {
-    min-height: 950px;
+    min-height: 864px;
     background-image: url("../img/index-can-tablet.jpg");
-    background-position: 0 250px;
+    background-position: 0 256px;
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -121,13 +160,17 @@
     &::before {
       display: none;
     }
+
+    &::after {
+      display: none;
+    }
   }
 
-  .page-header__flex-container {
-    flex-direction: row;
+  /*.page-header__flex-container {
+    /*flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
+  }*/
 
   .page-header__wrapper {
     flex-direction: row;
@@ -156,7 +199,9 @@
     color: #000000;
     font-size: 60px;
     line-height: 60px;
-    margin-left: 85px;
+    margin-left: 87px;
+    margin-top: 55px;
+    margin-bottom: 41px;
   }
 
   .page-header__tagline {
@@ -164,15 +209,15 @@
     font-size: 20px;
     line-height: 20px;
     font-style: normal;
-    margin-bottom: 50px;
-    margin-left: 85px;
+    margin-bottom: 46px;
+    margin-left: 89px;
   }
 
-  .page-header__btn {
-    margin-left: 85px;
+  .button--header {
+    margin-left: 89px;
     font-size: 20px;
     line-height: 20px;
-    padding: 16px 25px;
+    padding: 16px 27px;
   }
 }
 
@@ -183,16 +228,16 @@
 
   .page-header__title,
   .page-header__tagline,
-  .page-header__btn {
-    margin-left: 110px;
+  .button--header {
+    margin-left: 80px;
   }
 
   .page-header--index {
     min-height: 700px;
-    background-image: url("../img/index-background-desktop.jpg");
+    /*background-image: url("../img/index-background-desktop.jpg");
     background-position: 50vw 0;
     background-repeat: no-repeat;
-    background-size: 700px;
+    background-size: contain;*/
 
     &::after {
       content: "";
@@ -200,21 +245,37 @@
       display: block;
       right: 0;
       top: 0;
-      width: 45vw;
-      height: 675px;
-      background-color: #64a83b;
-      z-index: -1;
+      width: 50vw;
+      min-height: 700px;
+      /*background-color: #64a83b;*/
+      /*z-index: -1;*/
+      background-image: url("../img/index-background-desktop.jpg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 100%;
     }
 
     &::before {
-      margin-left: -150px;
+      margin-left: -160px;
       display: block;
+      z-index: 200;
     }
   }
 
   .page-header__present {
-    min-height: 700px;
+    min-height: 660px;
     width: 650px;
     background-image: none;
+  }
+
+  .page-header__image {
+    width: 202px;
+    margin-top: -3px;
+    margin-left: 11px;
+  }
+
+  .page-header__title {
+    margin-top: 108px;
+    /*margin-left: 80px;*/
   }
 }

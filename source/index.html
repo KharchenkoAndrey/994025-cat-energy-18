@@ -12,8 +12,9 @@
       <include src="build/img/sprite.svg"></include>
     </div>
     <header class="page-header page-header--index">
+      <div class="container">
       <div class="page-header__flex-container">
-        <div class="page-header__wrapper container">
+        <div class="page-header__wrapper">
           <div class="page-header__logo header-logo">
             <a href="" class="page-header__link">
               <picture>
@@ -39,18 +40,16 @@
               </ul>
             </div>
           </nav>
+          </div>
         </div>
           <div class="page-header__present">
-            <div class="container">
             <div class="page-header__wrapper page-header__wrapper--present">
               <h1 class="page-header__title">Функциональное питание для котов</h1>
               <span class="page-header__tagline">Занялся собой? Займись котом!</span>
-              <a href="" class="page-header__btn button">Подобрать программу</a>
+              <a href="" class="button button--header">Подобрать программу</a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
   </header>
   <main class="page-main">
     <section class="programms">
@@ -72,9 +71,9 @@
               <img class="programms__img programms__img--pro" src="img/icon-cat-pro.svg" alt="" width="67" height="28">
             </div>
             <h3 class="programms__title programms__title--pro">Набор массы</h3>
-            <p class="programms__text">
-              Заработать авторитет среди дворовых котов и даже собак?
-              Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
+            <p class="programms__text programms__text--pro">
+              Заработать авторитет среди дворовых котов и&nbsp;даже собак?
+Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
             <a href="" class="programms__link">Каталог Pro</a>
           </li>
@@ -113,41 +112,53 @@
       </div>
     </section>
     <section class="example">
-      <div class="example__wrapper container">
+      <div class="container">
+      <div class="example__wrapper">
         <div class="example__intro">
         <h2 class="example__title">Живой пример</h2>
         <p class="example__text">
           Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
         </p>
         <div class="example__results">
-          <fieldset class="example__result"><span>5 кг</span>
-          <legend class="example__total">снижение<br> веса</legend>
-        </fieldset>
-        <fieldset class="example__result"><span>60 дней</span>
-        <legend class="example__total">затрачено<br> времени</legend>
-      </fieldset>
-      <p class="example__cost">Затраты на питание: 15 000 руб.</p>
+          <div class="example__result">
+            <span>5 кг</span>
+            <span class="example__total example__total--weight">снижение<br> веса</span>
+        </div>
+        <div class="example__result">
+          <span>60 дней</span>
+        <span class="example__total">затрачено<br> времени</span>
+      </div>
+      <p class="example__cost">Затраты на питание: <span>15 000 руб.</span></p>
     </div>
     </div>
       <div class="example__tabs">
         <div class="example__switcher">
-          <label for="tab1">Было</label>
+          <picture>
+          <source type="image/webp" srcset="img/before-mobile.webp 1x, img/before-mobile@2x.webp 2x">
+          <img src="img/before-mobile.png" srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Ваш питомец до" class="example__image example__image--before">
+          </picture>
+          <picture>
+          <source type="image/webp" srcset="img/after-mobile.webp 1x, img/after-mobile@2x.webp 2x">
+          <img src="img/after-mobile.png" srcset="img/after-mobile@2x.png 2x" width="251" height="240" alt="Ваш питомец до" class="example__image example__image--after">
+          </picture>
+          <label class="example__toggle--before" for="tab1">Было</label>
           <input id="tab1" type="checkbox" name="tab">
           <div class="example__slider"><span></span></div>
           <label for="tab1">Стало</label>
-          <img src="img/before-mobile.png" srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Ваш питомец до" class="example__image example__image--before">
-          <img src="img/after-mobile.png" srcset="img/after-mobile@2x.png 2x" width="251" height="240" alt="Ваш питомец до" class="example__image example__image--after">
         </div>
       </div>
-    </div>
+
       <div class="example__comparison">
         <div class="example__photos">
           <picture>
+          <source media="(min-width: 1300px)" type="image/webp" srcset="img/before-desktop@1x.webp, img/before-desktop@2x.webp 2x">
           <source type="image/webp" srcset="img/before-tablet.webp 1x, img/before-tablet@2x.webp 2x">
           <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
           <img class="example__photo-before" src="img/before-tablet.png" srcset="img/before-tablet@2x.png 2x" alt="До" width="690" height="517">
           </picture>
           <picture>
+          <source media="(min-width: 1300px)" type="image/webp" srcset="img/after-desktop@1x.webp, img/after-desktop@2x.webp 2x">
+          <source type="image/webp" srcset="img/after-tablet.webp 1x, img/after-tablet@2x.webp 2x">
           <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png, img/after-desktop@2x.png 2x">
           <img class="example__photo-after" src="img/after-tablet.png" srcset="img/after-tablet@2x.png 2x" alt="После" width="690" height="517">
           </picture>
@@ -166,17 +177,21 @@
             <img src="img/after-tablet.png" alt="После" width="690" height="517">
           </div>-->
         </div>
+      </div>
+    </div>
   </section>
   <section class="invite">
-    <div class="invite__wrapper container">
+    <div class="container">
+    <div class="invite__wrapper">
       <h2 class="visually-hidden">Наш адрес</h2>
       <div class="invite__address">
         <p class="invite__text-dillers"> приглашаем  к сотрудничеству  дилеров!</p>
         <p class="invite__text-adress"> ул. Большая Конюшенная, д. 19/8  Санкт-Петербург</p>
       </div>
     </div>
+  </div>
     <div class="invite__map">
-      <iframe class="invite__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002753!2d30.32085871561837!3d59.93871916905476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573559252961!5m2!1sru!2sru" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      <iframe class="invite__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002753!2d30.32085871561837!3d59.93871916905476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573559252961!5m2!1sru!2sru" width="320" height="400" style="border:0;" allowfullscreen=""></iframe>
     </div>
   </section>
   <footer class="page-footer">
@@ -210,7 +225,7 @@
             </li>
             <li class="social__item">
               <a href="" class="social__link social__link--insta">
-                <svg class="social__img social__img--insta" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg class="social__img social__img--insta" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve" width="16" height="16">
                   <path fill="#666666" class="st0" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1H11.8
                     M11.8,0H4.2C1.9,0,0,1.9,0,4.2v7.7C0,14.1,1.9,16,4.2,16h7.7c2.3,0,4.2-1.9,4.2-4.2V4.2C16,1.9,14.1,0,11.8,0z"/>
@@ -222,7 +237,7 @@
                 </li>
                 <li class="social__item">
                   <a href="" class="social__link social__link--fb">
-                    <svg class="social__img social__img--fb" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    <svg class="social__img social__img--fb" version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                       viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve" width="10" height="19">
                       <path fill="#666666" d="M7.1,19H2v-8.8H0V5.8h1.9C1.8,3.8,2.1,2.4,3,1.4C3.8,0.5,5,0.1,6.5,0H10v4.2H7.2C7.1,4.4,7,5,7,5.8h3v4.4H7.1V19z M3.1,18
                         h2.8V9.1h2.9V6.8H5.9V6.3c0-1.4,0-2.6,0.7-3.1l0.1-0.1h2.1V1H6.5c-1.2,0.1-2,0.4-2.6,1c-0.8,0.8-1,2.3-0.8,4.2l0.1,0.6H1.1v2.3h2V18

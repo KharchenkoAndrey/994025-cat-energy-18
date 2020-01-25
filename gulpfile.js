@@ -65,6 +65,7 @@ gulp.task("images", function () {
 
 gulp.task("copy", function () {
   return gulp.src([
+    "source/css/normalize.css",
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",

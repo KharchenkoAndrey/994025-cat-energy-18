@@ -2,7 +2,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  margin-right: 15px;
+  margin-right: 11px;
 }
 
 .field-label--radio {
@@ -48,15 +48,17 @@
   .field-label {
     font-size: 20px;
     line-height: 20px;
+    margin-right: 20px;
   }
 
   .field-label--radio {
     padding-left: 60px;
+    transform: translateX(7px);
 
     &::before {
       width: 40px;
       height: 40px;
-      margin-top: -20px;
+      margin-top: -21px;
     }
   }
 
@@ -65,5 +67,16 @@
     height: 18px;
     top: 2px;
     left: 12px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-label--radio {
+    transform: translateX(30px);
+  }
+
+  .field-radio:checked + .field-label--radio::after {
+    top: 3px;
+    left: 13px;
   }
 }

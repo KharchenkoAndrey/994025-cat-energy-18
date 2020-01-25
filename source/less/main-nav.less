@@ -17,9 +17,16 @@
 @media (min-width: @tablet-width) {
   .main-nav--closed {
     display: flex;
+    z-index: 300;
   }
 
   .main-nav--closed .site-list {
     display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: 480px;
   }
 }
