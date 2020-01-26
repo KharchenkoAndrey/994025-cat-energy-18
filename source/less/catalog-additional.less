@@ -56,6 +56,7 @@
 }
 
 .catalog-additional__table td {
+  font-family: @arial;
   font-size: 14px;
   line-height: 14px;
   color: #444444;
@@ -105,6 +106,7 @@
 @media (min-width: @tablet-width) {
   .catalog-additional {
     margin-top: -70px;
+    margin-bottom: 0;
   }
 
   .catalog-additional__table {
@@ -132,6 +134,11 @@
     &:last-child {
       transform: translateX(-4px);
     }
+  }
+
+  .catalog-additional__quantity {
+    min-width: 132px;
+    text-align: right;
   }
 
   .catalog-additional__title {
@@ -170,7 +177,6 @@
   }
 
   .catalog-additional__present {
-    margin-bottom: 40px;
     margin-top: 65px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
@@ -206,7 +212,7 @@
     justify-content: space-between;
     width: 1220px;
     align-items: center;
-    margin-bottom: 70px;
+    margin-bottom: 88px;
   }
 
   .catalog-additional__present {
@@ -223,7 +229,8 @@
   .catalog-additional__title {
     width: 100%;
     transform: translate(-37px, 9px);
-    margin-bottom: 74px;
+    margin-top: -9px;
+    margin-bottom: 72px;
 
     &::after {
       right: -150px;
@@ -255,12 +262,18 @@
 
   .catalog-additional__table th {
     padding: 0;
-    width: auto;
+    width: 234px;
+    padding-top: 4px;
   }
 
   .catalog-additional__table td {
     padding: 0;
-    width: auto;
+    text-align: left;
+    padding-top: 6px;
+
+    &:last-child {
+      transform: translate(-28px);
+    }
   }
 
   .catalog-additional__btn {
@@ -276,15 +289,15 @@
   }
 
   .catalog-additional__text {
-    top: 190px;
-    left: 50px;
+    top: 187px;
+    left: 41px;
     text-align: center;
     margin: 0;
 
     &::before {
-      top: -120px;
+      top: -122px;
       left: 50%;
-      margin-left: -25.5px;
+      margin-left: -27.5px;
     }
   }
 }

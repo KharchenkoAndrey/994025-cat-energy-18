@@ -23,6 +23,7 @@
 }
 
 .invite__text-adress {
+  font-family: @arial;
   font-size: 14px;
   line-height: 20px;
   color: #444444;
@@ -42,11 +43,20 @@
 }
 
 @media (min-width: @tablet-width) {
+  .invite {
+    margin-top: -10px;
+  }
+
+  .invite--form {
+    margin-top: 20px;
+  }
+
   .invite__wrapper {
     padding: 0 40px;
   }
 
   .invite__text-dillers {
+    width: 160px;
     font-size: 20px;
     line-height: 25px;
   }
@@ -56,8 +66,19 @@
     padding-bottom: 65px;
   }
 
+  .invite__text-adress {
+    font-size: 16px;
+    text-align: right;
+    width: 160px;
+  }
+
+  .invite__text-adress span {
+    display: block;
+    transform: translateY(20px);
+  }
+
   .invite__map {
-    height: 430px;
+    height: 400px;
   }
 }
 
@@ -84,13 +105,16 @@
   .invite__text-dillers {
     font-size: 20px;
     line-height: 25px;
+    transform: translate(-3px, 3px);
   }
 
   .invite__text-adress {
     font-size: 16px;
+    text-align: left;
+    transform: translate(-3px, 3px);
   }
 
-  .invite__map {
-    height: 385px;
+  .page-footer__logo {
+    transform: translateY(-6px);
   }
 }
