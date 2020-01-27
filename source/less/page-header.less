@@ -1,5 +1,6 @@
 .page-header {
   position: relative;
+  overflow: hidden;
 
   &::before {
     content: "";
@@ -21,18 +22,31 @@
   }
 }
 
-.page-header__bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -135px;
-  margin-left: -140px;
-  z-index: 100;
-}
-
 .page-header__wrapper {
   display: flex;
   flex-direction: column;
+}
+
+.page-header__wrapper--present {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 165px;
+    left: 50%;
+    width: 280px;
+    height: 271px;
+    margin-left: -140px;
+    background-image: url("../img/index-can-mobile.png");
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-can-mobile@2x.png");
+    }
+  }
 }
 
 .page-header__link {
@@ -59,9 +73,9 @@
   text-align: center;
   min-height: 500px;
   background-image: url("../img/index-background-mobile.jpg");
-  background-position: 0 0;
+  background-position: center top;
   background-repeat: no-repeat;
-  background-size: 100vw 305px;
+  background-size: auto 305px;
 
   @media (min-resolution: @retina-dppx) {
     background-image: url("../img/index-background-mobile@2x.jpg");
@@ -71,32 +85,22 @@
     content: "";
     position: absolute;
     top: 0;
-    left: -20px;
+    right: 0;
     width: 100vw;
     height: calc(60% + 5px);
     background-color: #64a83b;
     z-index: -500;
-
-    @media (min-width: 321px) {
-      display: none;
-    }
   }
 
   &::before {
     content: "";
     position: absolute;
-    top: 167px;
+    top: 0;
     left: 0;
-    width: 280px;
-    height: 271px;
-    background-image: url("../img/index-can-mobile.png");
-    background-position: 0 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    @media (min-resolution: @retina-dppx) {
-      background-image: url("../img/index-can-mobile@2x.png");
-    }
+    width: 100vw;
+    height: calc(60% + 5px);
+    background-color: #64a83b;
+    z-index: -500;
   }
 }
 
@@ -125,16 +129,14 @@
   flex-direction: column;
 }
 
-/*.page-neader__btn {
-  font-size: 14px;
-  line-height: 18px;
-  width: 100%;
-}*/
-
 @media (min-width: @tablet-width) {
   .page-header {
     background-image: none;
     padding-top: 20px;
+
+    /*&::after {
+      display: none;
+    }*/
   }
 
   .page-header__logo {
@@ -166,12 +168,6 @@
     }
   }
 
-  /*.page-header__flex-container {
-    /*flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }*/
-
   .page-header__wrapper {
     flex-direction: row;
     align-items: center;
@@ -181,6 +177,10 @@
   .page-header__wrapper--present {
     flex-direction: column;
     align-items: flex-start;
+
+    &::after {
+      display: none;
+    }
   }
 
   .page-header__link {
@@ -224,6 +224,14 @@
 @media (min-width: @desktop-width) {
   .page-header {
     padding-top: 50px;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      display: block;
+    }
   }
 
   .page-header__title,
@@ -234,25 +242,20 @@
 
   .page-header--index {
     min-height: 700px;
-    /*background-image: url("../img/index-background-desktop.jpg");
-    background-position: 50vw 0;
-    background-repeat: no-repeat;
-    background-size: contain;*/
 
     &::after {
       content: "";
       position: absolute;
       display: block;
-      right: 0;
+      left: 50%;
       top: 0;
-      width: 50vw;
+      width: 100vw;
       min-height: 700px;
-      /*background-color: #64a83b;*/
-      /*z-index: -1;*/
+      background-color: #64a83b;
       background-image: url("../img/index-background-desktop.jpg");
       background-position: 0 0;
       background-repeat: no-repeat;
-      background-size: 100%;
+      background-size: contain;
     }
 
     &::before {
@@ -266,6 +269,11 @@
     min-height: 660px;
     width: 650px;
     background-image: none;
+
+    &::after,
+    &::before {
+      display: none;
+    }
   }
 
   .page-header__image {
@@ -276,6 +284,5 @@
 
   .page-header__title {
     margin-top: 108px;
-    /*margin-left: 80px;*/
   }
 }
