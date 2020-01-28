@@ -8,7 +8,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -25px;
+    top: -37px;
     left: 0;
     width: 280px;
     height: 1px;
@@ -30,6 +30,10 @@
 }
 
 .copyright__logo {
+  position: absolute;
+  top: -22px;
+  right: -6px;
+
   &:hover,
   &:focus {
     path {
@@ -52,5 +56,11 @@
     &::before {
       display: none;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright__logo {
+    top: -19px;
   }
 }
