@@ -1,6 +1,6 @@
 .social {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 65px;
 
   &::after {
     content: "";
@@ -15,9 +15,12 @@
 }
 
 .social__list {
+  width: 125px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin: 0;
+  transform: translate(-4px, 4px);
 }
 
 .social__item {
@@ -50,6 +53,16 @@
     &::after {
       display: none;
     }
+  }
+
+  .social__list {
+    width: 100px;
+    transform: translate(-1px, -3px);
+  }
+
+  .social__item {
+    margin: 0;
+    margin-right: 28px;
   }
 
   .social__img--vk {

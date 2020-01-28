@@ -1,0 +1,42 @@
+.field-text {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  flex-grow: 1;
+  padding: 12px 0 13px 15px;
+  border: 1px solid #e6e6e6;
+  outline: none;
+
+  &::placeholder {
+    font-family: @oswald;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus,
+  &:active {
+    border: 2px solid #444444;
+  }
+
+  &--error {
+    border-color: #ff8282;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .field-text {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px 0 10px 15px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+}

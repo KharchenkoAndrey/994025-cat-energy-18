@@ -2,7 +2,7 @@
   position: relative;
   font-size: 24px;
   line-height: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 
   &::after {
     content: "";
@@ -19,21 +19,22 @@
   .comment__legend {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 70px;
+    margin-bottom: 48px;
+    transform: translateY(-24px);
 
     &::before {
       content: "";
       position: absolute;
-      top: 20px;
-      right: 200px;
+      top: 22px;
+      right: 221px;
       width: 100vw;
       height: 3px;
       background-color: #68b738;
     }
 
     &::after {
-      top: 20px;
-      left: 220px;
+      top: 22px;
+      left: 219px;
     }
   }
 }
@@ -42,11 +43,11 @@
 @media (min-width: @desktop-width) {
   .comment__legend {
     &::before {
-      right: 200px;
+      right: 221px;
     }
 
     &::after {
-      left: 250px;
+      left: 219px;
     }
   }
 }

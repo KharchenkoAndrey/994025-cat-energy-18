@@ -1,5 +1,10 @@
+.catalog-additional {
+  margin-bottom: 35px;
+}
+
 .catalog-additional__item {
   border-top: 1px solid #cdcdcd;
+  min-height: 128px;
 
   &:last-child {
     border-bottom: 1px solid #cdcdcd;
@@ -27,7 +32,8 @@
 
 .catalog-additional__btn {
   text-align: center;
-  margin-bottom: 15px;
+  /*margin-bottom: 15px;*/
+  margin-top: -6px;
 }
 
 .catalog-additional__table {
@@ -50,6 +56,7 @@
 }
 
 .catalog-additional__table td {
+  font-family: @arial;
   font-size: 14px;
   line-height: 14px;
   color: #444444;
@@ -62,7 +69,7 @@
 
 .catalog-additional__present {
   position: relative;
-  margin-top: 50px;
+  margin-top: 43px;
   width: 100%;
   min-height: 289px;
   background-image: url("../img/gift-photo-mobile.jpg");
@@ -88,8 +95,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: -100px;
-    left: 50px;
+    top: -120px;
+    left: 53px;
     width: 55px;
     height: 60px;
     background-image: url("../img/icon-gift.svg");
@@ -97,6 +104,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .catalog-additional {
+    margin-top: -70px;
+    margin-bottom: 0;
+  }
+
   .catalog-additional__table {
     width: auto;
   }
@@ -109,39 +121,54 @@
     font-size: 20px;
     line-height: 20px;
     width: 400px;
+    padding-top: 0;
   }
 
   .catalog-additional__table td {
+    font-family: @arial;
     font-size: 16px;
     line-height: 20px;
+    padding-top: 4px;
+    transform: translateX(-25px);
+
+    &:last-child {
+      transform: translateX(-4px);
+    }
+  }
+
+  .catalog-additional__quantity {
+    min-width: 132px;
+    text-align: right;
   }
 
   .catalog-additional__title {
     font-size: 36px;
     line-height: 36px;
-    margin-left: 40px;
-    margin-bottom: 70px;
-
-    &::after {
-      top: 20px;
-      right: -30px;
-      width: 327px;
-    }
+    margin-left: 36px;
+    margin-bottom: 79px;
 
     &::before {
       position: absolute;
       content: "";
       top: 20px;
-      left: -70px;
-      width: 28px;
+      right: 710px;
+      width: 100vw;
       height: 3px;
       background-color: #68b738;
+    }
+
+    &::after {
+      top: 20px;
+      left: 375px;
+      width: 100vw;
     }
   }
 
   .catalog-additional__item {
     border: 1px solid #e6e6e6;
     padding: 25px 35px;
+    padding-bottom: 0;
+    min-height: 114px;
     border-bottom: none;
 
     &:last-child {
@@ -150,7 +177,7 @@
   }
 
   .catalog-additional__present {
-    margin-bottom: 70px;
+    margin-top: 65px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
     @media (min-resolution: @retina-dppx) {
@@ -168,9 +195,13 @@
     text-align: left;
 
     &::before {
-      top: 0;
-      left: -335px;
+      top: -5px;
+      left: -329px;
     }
+  }
+
+  .catalog-additional__btn {
+    margin-top: 3px;
   }
 }
 
@@ -181,7 +212,7 @@
     justify-content: space-between;
     width: 1220px;
     align-items: center;
-    margin-bottom: 70px;
+    margin-bottom: 88px;
   }
 
   .catalog-additional__present {
@@ -197,21 +228,25 @@
 
   .catalog-additional__title {
     width: 100%;
+    transform: translate(-37px, 9px);
+    margin-top: -9px;
+    margin-bottom: 72px;
 
     &::after {
-      right: -80px;
-      width: 860px;
+      left: 375px;
+      width: 100vw;
     }
 
     &::before {
-      left: -110px;
-      width: 70px;
+      right: 1225px;
+      width: 100vw;
     }
   }
 
   .catalog-additional__card {
     display: flex;
     align-items: center;
+    padding: 14.5px 0;
   }
 
   .catalog-additional__list {
@@ -219,25 +254,36 @@
   }
 
   .catalog-additional__item {
+    display: flex;
     border-right: transparent;
     border-left: transparent;
-    padding: 15px 0;
+    padding: 0 0;
+    min-height: 71px;
   }
 
   .catalog-additional__table th {
     padding: 0;
-    width: auto;
+    width: 234px;
+    padding-top: 4px;
+    text-align: left;
+    margin-right: 90px;
   }
 
   .catalog-additional__table td {
     padding: 0;
-    width: auto;
+    text-align: left;
+    padding-top: 6px;
+    width: 132px;
+
+    &:last-child {
+      transform: translate(-28px);
+    }
   }
 
   .catalog-additional__btn {
     margin: 0;
     width: 245px;
-    margin-left: 40px;
+    margin-left: 8px;
   }
 
   .catalog-additional__image {
@@ -247,15 +293,15 @@
   }
 
   .catalog-additional__text {
-    top: 190px;
-    left: 50px;
+    top: 187px;
+    left: 41px;
     text-align: center;
     margin: 0;
 
     &::before {
-      top: -120px;
+      top: -122px;
       left: 50%;
-      margin-left: -25.5px;
+      margin-left: -27.5px;
     }
   }
 }
