@@ -23,9 +23,9 @@
                   <img class="page-header__image" src="img/logo-mobile.svg" alt="Логотип магазина Cat Energy" width="195" height="45">
                 </picture>
               </a>
-              <button class="burger burger--closed" type="button"><span class="visually-hidden">Открыть меню</span></button>
+              <button class="burger burger--nojs" type="button"><span class="visually-hidden">Открыть меню</span></button>
             </div>
-            <nav class="main-nav main-nav--closed">
+            <nav class="main-nav main-nav--opened">
               <div class="main-nav__wrapper">
                 <ul class="main-nav__list site-list">
                   <li class="site-list__item">
@@ -141,7 +141,7 @@
                   <source type="image/webp" srcset="img/after-mobile.webp 1x, img/after-mobile@2x.webp 2x">
                   <img src="img/after-mobile.png" srcset="img/after-mobile@2x.png 2x" width="251" height="240" alt="Ваш питомец до" class="example__image example__image--after">
                 </picture>
-                <label class="example__toggle example__toggle--before" for="tab1">Было</label>
+                <label for="tab1">Было</label>
                 <input id="tab1" type="checkbox" name="tab">
                 <div class="example__slider"><span></span></div>
                 <label for="tab1">Стало</label>
@@ -164,7 +164,7 @@
                 <div class="example__range">
                   <button class="example__button" type="button">Было</button>
                   <div class="example__scale">
-                    <div class="example__toggle"></div>
+                    <div class="example__toggle" aria-label="Сравнение результата до и после"></div>
                   </div>
                   <button class="example__button" type="button">Стало</button>
                 </div>
@@ -198,7 +198,7 @@
             <ul class="social__list">
               <li class="social__item">
                 <a href="" class="social__link social__link--vk">
-                  <svg class="social__img social__img--vk" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  <svg class="social__img social__img--vk" aria-label="Магазин КэтЭнерджи во Вконтакте" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve" width="22" height="12">
                     <path fill="#666666" d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
                       c0,0.1,0,0.6-0.3,0.9c-0.3,0.3-0.8,0.4-0.9,0.4h-1.4c-0.7,0-3.2-0.2-5.4-2.3C2.5,7.1,0.2,2.2,0.1,2C0,1.6-0.1,1.2,0.2,0.9
@@ -218,7 +218,7 @@
                 </li>
                 <li class="social__item">
                   <a href="" class="social__link social__link--insta">
-                    <svg class="social__img social__img--insta" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    <svg class="social__img social__img--insta" aria-label="Магазин КэтЭнерджи в Инстаграмм" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                       viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve" width="16" height="16">
                       <path fill="#666666" class="st0" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1H11.8
                         M11.8,0H4.2C1.9,0,0,1.9,0,4.2v7.7C0,14.1,1.9,16,4.2,16h7.7c2.3,0,4.2-1.9,4.2-4.2V4.2C16,1.9,14.1,0,11.8,0z"/>
@@ -230,7 +230,7 @@
                     </li>
                     <li class="social__item">
                       <a href="" class="social__link social__link--fb">
-                        <svg class="social__img social__img--fb" version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        <svg class="social__img social__img--fb" aria-label="Магазин КэтЭнерджи в Фейсбук" version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                           viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve" width="10" height="19">
                           <path fill="#666666" d="M7.1,19H2v-8.8H0V5.8h1.9C1.8,3.8,2.1,2.4,3,1.4C3.8,0.5,5,0.1,6.5,0H10v4.2H7.2C7.1,4.4,7,5,7,5.8h3v4.4H7.1V19z M3.1,18
                             h2.8V9.1h2.9V6.8H5.9V6.3c0-1.4,0-2.6,0.7-3.1l0.1-0.1h2.1V1H6.5c-1.2,0.1-2,0.4-2.6,1c-0.8,0.8-1,2.3-0.8,4.2l0.1,0.6H1.1v2.3h2V18
